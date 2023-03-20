@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- favicon -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <!-- title -->
+    <title>Tip calculator app</title>
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- css file -->
+    <link rel="stylesheet" href="./dist/css/style.css" />
+  </head>
+  <body>
+    <header>
+      <img src="./images/logo.svg" alt="main logo of the page" />
+      <h1 class="sr-only">Bill Spliter</h1>
+    </header>
+
+    <main>
+      <section class="bill">
+        <h2 class="sr-only">Bill Spliter Form</h2>
+        <form action="#">
+          <div class="bill__label-wrap">
+            <label for="bill" class="bill__label">Bill</label>
+            <span class="hide" id="message-bill">Can't be zero</span>
+          </div>
+
+          <input type="number" id="bill" class="bill__input" placeholder="0" />
+
+          <p class="bill__label">Select Tip %</p>
+
+          <div class="bill__grid">
+            <label class="bill__labl">
+              <input type="radio" name="radioname" value="5" class="sr-only" />
+              <div>5%</div>
+            </label>
+
+            <label class="bill__labl">
+              <input type="radio" name="radioname" value="10" class="sr-only" />
+              <div>10%</div>
+            </label>
+
+            <label class="bill__labl">
+              <input
+                type="radio"
+                name="radioname"
+                value="15"
+                class="sr-only"
+                checked
+              />
+              <div>15%</div>
+            </label>
+
+            <label class="bill__labl">
+              <input type="radio" name="radioname" value="25" class="sr-only" />
+              <div>25%</div>
+            </label>
+
+            <label class="bill__labl">
+              <input type="radio" name="radioname" value="50" class="sr-only" />
+              <div>50%</div>
+            </label>
+
+            <label class="bill__labl">
+              <input
+                type="radio"
+                name="radioname"
+                id="custom"
+                class="sr-only"
+              />
+              <input type="number" id="custom-input" placeholder="custom" />
+            </label>
+          </div>
+
+          <div class="bill__label-wrap">
+            <label for="numberOfPeople" class="bill__label"
+              >Number of People</label
+            >
+            <span class="hide" id="message-nop">Can't be zero</span>
+          </div>
+
+          <input
+            type="number"
+            class="bill__input"
+            id="numberOfPeople"
+            placeholder="0"
+          />
+        </form>
+      </section>
+
+      <section class="result">
+        <h2 class="sr-only">Final Result of Form</h2>
+        <div class="result__amount">
+          <h2>
+            Tip Amount <br />
+            <span>/ person</span>
+          </h2>
+
+          <div id="amount-per-person">$0.00</div>
+        </div>
+
+        <div class="result__total">
+          <h2>
+            Total <br />
+            <span>/ person</span>
+          </h2>
+
+          <div id="total-per-person">$0.00</div>
+        </div>
+
+        <button class="result__btn" id="btn" type="button">Reset</button>
+      </section>
+    </main>
+
+    <footer class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="https://github.com/tahmidul40">Tahmidul</a>.
+    </footer>
+
+    <!-- js file -->
+    <script src="app/js/script.js"></script>
+  </body>
+</html>

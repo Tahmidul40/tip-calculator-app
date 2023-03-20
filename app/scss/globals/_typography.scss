@@ -1,0 +1,14 @@
+@use "../util" as u;
+
+/* -------------------- */
+/* typography           */
+/* -------------------- */
+
+:root {
+  /* font family */
+  --ff-space-mono: "Space Mono", sans-serif;
+}
+
+.ff-sans-serif {
+  font-family: var(--ff-space-mono);
+}
