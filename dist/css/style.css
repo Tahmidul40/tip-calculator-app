@@ -241,7 +241,7 @@ main {
   background-color: hsl(var(--clr-result-op)/0.75);
   color: hsl(var(--clr-very-dark-cyan));
 }
-.bill__labl div {
+.bill__labl span {
   font-size: 18px;
   display: flex;
   justify-content: center;
@@ -249,7 +249,7 @@ main {
   padding: 10px 0 9px;
 }
 @media (min-width: 56.25em) {
-  .bill__labl div {
+  .bill__labl span {
     font-size: 24px;
   }
 }
